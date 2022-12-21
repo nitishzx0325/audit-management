@@ -1,0 +1,10 @@
+version: 1.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "arn:aws:ecs:us-east-1:860061945305:task-definition/nitish_Authorization:1"
+        LoadBalancerInfo:
+          ContainerName: "nitish_Authrization"
+          ContainerPort: "8100"
+        PlatformVersion: "LATEST"
